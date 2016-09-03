@@ -12,17 +12,19 @@ The ContainerTask works in general with Open Container Initiative images, which 
 
 Two ways: download it or build it.
 
-- to download it:
-    Search for the image that interests you:
-        $ sudo docker search <tags>
-    Then download it:
-        $ sudo docker pull <image>
+### to download one: ###
+Search for the image that interests you:
+    $ sudo docker search <tags>
 
-- to build it:
-    Create your own Dockerfile (look for tutorials), then:
-        $ sudo docker build -t <nameimage> .
+Then download it:
+    $ sudo docker pull <image>
 
-Once the image is loaded by Docker:
-    $ sudo docker save <image> > my-docker-image.tar
+### to build one: ###
+Create your own Dockerfile (look for tutorials), then:
+    $ sudo docker build -t <nameimage> .
 
-You can then upload this archive and use it in the same way the python3 archive is used in this example.
+### to get the archive: ###
+Once the image is loaded by Docker, get the archive using `save`:
+$ sudo docker save <image> > my-docker-image.tar
+
+You can then upload this archive to the workflow, and use it in the same way the python3 archive is used in this example.
