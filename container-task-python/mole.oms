@@ -1,0 +1,23 @@
+
+// Declare the variable
+val arg = Val[Int]
+val output = Val[File]
+
+// The archive is the alpine-python3 Docker image (it's light! 61MB only)
+// The python file is a script that doubles a number (arg) and stores it in a file (arg2)
+
+val containerTask =
+  ContainerTask(workDirectory / "alpine-python3.tar.gz", "python3 script.py ${arg} output.txt") set (
+    arg := 100,
+    resources += workDirectory / "script.py",
+    inputs += arg,
+    outputFiles += ("output.txt", output)
+  )
+
+val copy = CopyFileHook(output, workDirectory / "output.txt")
+val env = LocalEnvironment(1)
+
+EmptyTask() -- (containerTask hook copy on env)
+
+// After running it, refresh the folder.
+// 'output.txt' should appear, with 200 in it
