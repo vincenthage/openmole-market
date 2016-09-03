@@ -9,7 +9,8 @@ The ContainerTask relies on the [OCI](https://www.opencontainers.org/about) imag
 
 ## How to get a Docker image archive ##
 
-Two ways: download it or build it.
+The image needs to be loaded by Docker beforehand.
+Two ways of doing this: download it or build it.
 
 ### to download one: ###
 Search for the image that interests you:
@@ -26,7 +27,7 @@ Create your own Dockerfile (look for tutorials), then:
     $ sudo docker build -t <nameimage> .
 
 ### to get the archive: ###
-Once the image is loaded by Docker, get the archive using `save`:
+Then, once the image is loaded by Docker, get the archive using `save`:
 
     $ sudo docker save <nameimage> > my-docker-image.tar
 
