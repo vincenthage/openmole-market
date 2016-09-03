@@ -1,5 +1,5 @@
 # Executing Docker images with the ContainerTask #
-This workflow showcases the use Docker images with OpenMOLE using the ContainerTask.
+This workflow showcases the use of Docker images with OpenMOLE using the ContainerTask.
 
 In particular, this example uses the `frolvlad/alpine-python3` Docker image (the lightest image with python3) to execute a Python script and return a result inside a text file.
 

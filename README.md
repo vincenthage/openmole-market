@@ -27,4 +27,4 @@ All the accepted submissions will be part of the market place and will be compil
   - [R hello world](R-hello): a *Hello world* in R ranging over 100 of different inputs.
   - [Random Forest classifier](randomforest): This workflow explores the parameters of a random forest image classifier written in Python using scikit-learn.
   - [SimPopLocal model](simpoplocal): A geographical model calibrated using genetic algorithms.
-  - [ContainerTask python](container-task-python): This workflow showcases the use Docker images with the ContainerTask, and in this case, applied to a python Docker image to execute a script.
+  - [ContainerTask python](container-task-python): This workflow showcases the use of Docker images with the ContainerTask, and in this case, applied to a python Docker image to execute a script.
